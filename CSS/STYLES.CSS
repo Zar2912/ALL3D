@@ -1,0 +1,170 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('https://services.meteored.com/img/article/para-qual-lugar-o-universo-esta-se-expandindo-1685829316554_1280.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.centrado-texto {
+    text-align: center;
+}
+
+/* Galería y Productos */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    max-width: 25%;
+    margin-bottom: 10px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 180px; /* Ajusta el ancho de cada producto */
+}
+
+.product img {
+    width: 100%; /* Ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-height: 150px; /* Tamaño máximo de altura para todas las imágenes */
+    object-fit: contain; /* Ajusta la imagen para no recortarse */
+    margin-bottom: 10px;
+}
+
+/* Estilos para formularios centrados */
+.centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea, form input[type="file"], form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+/* Estilo para los íconos de redes sociales */
+.svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    filter: invert(100%) brightness(200%);
+}
+
+.svg-youtube, .svg-cults3d {
+    width: 24px;
+    height: 24px;
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.social a {
+    color: white; /* Cambia el color de las redes sociales a blanco */
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Consultas de medios para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .gallery img {
+        max-width: 45%;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    form input, form textarea, form input[type="file"], form button {
+        width: 90%;
+    }
+}
