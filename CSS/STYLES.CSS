@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +10,6 @@ body {
     color: white;
 }
 
-/* Encabezado y navegación */
 header {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
@@ -21,9 +19,16 @@ header {
     margin-bottom: 20px;
 }
 
+nav {
+    flex-grow: 1;
+}
+
 nav ul {
     display: flex;
+    justify-content: flex-end;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -33,9 +38,9 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
-/* Secciones */
 section {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -47,7 +52,6 @@ section {
     text-align: center;
 }
 
-/* Galería y Productos */
 .gallery {
     display: flex;
     justify-content: space-around;
@@ -70,28 +74,17 @@ section {
     padding: 10px;
     text-align: center;
     margin: 10px;
-    width: 180px; /* Ajusta el ancho de cada producto */
+    width: 180px;
 }
 
 .product img {
-    width: 100%; /* Ocupa el 100% del contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    max-height: 150px; /* Tamaño máximo de altura para todas las imágenes */
-    object-fit: contain; /* Ajusta la imagen para no recortarse */
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
     margin-bottom: 10px;
 }
 
-/* Especificaciones para imágenes de productos seleccionados */
-.product img.dragon {
-    max-height: 150px; /* Tamaño máximo de altura para el dragón */
-}
-
-.product img.amiibo,
-.product img.llavero {
-    max-height: 150px; /* Tamaño máximo de altura para amiibo y llavero */
-}
-
-/* Estilos para formularios centrados */
 .centrado {
     display: flex;
     flex-direction: column;
@@ -114,7 +107,6 @@ form button {
     font-size: 14px;
 }
 
-/* Pie de página */
 footer {
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
@@ -122,7 +114,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Estilo para los íconos de redes sociales */
 .svg {
     width: 16px;
     height: 16px;
@@ -136,42 +127,54 @@ footer {
     height: 24px;
 }
 
-/* Estilo para los enlaces de redes sociales */
-.social a {
-    color: white; /* Cambia el color de los nombres de las redes sociales a blanco */
+footer .social a {
+    color: white;
     text-decoration: none;
     display: inline-block;
     margin: 0 5px;
 }
 
-
-/* Consultas de medios para dispositivos móviles con un ancho máximo de 1080px */
 @media (max-width: 1080px) {
-    nav {
-        display: flex;
-        justify-content: center; /* Centra horizontalmente el nav */
-        align-items: center; /* Centra verticalmente si es necesario */
+    header {
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul {
-        display: flex;
-        justify-content: center; /* Centra los elementos dentro del ul */
-        flex-direction: column; /* Coloca los elementos en columna */
-        align-items: center; /* Centra cada elemento */
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0; /* Espacio vertical entre los elementos */
+        margin: 10px 0;
     }
 
     nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px; /* Ajusta el tamaño de la fuente para mejor visualización */
+        width: auto;
         text-align: center;
-        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .gallery img {
+        max-width: 45%;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    form input, form textarea, form input[type="file"], form button {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1081px) {
+    nav ul {
+        justify-content: flex-end;
     }
 }
