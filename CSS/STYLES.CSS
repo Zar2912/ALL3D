@@ -81,6 +81,16 @@ section {
     margin-bottom: 10px;
 }
 
+/* Especificaciones para imágenes de productos seleccionados */
+.product img.dragon {
+    max-height: 150px; /* Tamaño máximo de altura para el dragón */
+}
+
+.product img.amiibo,
+.product img.llavero {
+    max-height: 150px; /* Tamaño máximo de altura para amiibo y llavero */
+}
+
 /* Estilos para formularios centrados */
 .centrado {
     display: flex;
@@ -104,6 +114,14 @@ form button {
     font-size: 14px;
 }
 
+/* Pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
 /* Estilo para los íconos de redes sociales */
 .svg {
     width: 16px;
@@ -118,20 +136,14 @@ form button {
     height: 24px;
 }
 
-/* Pie de página */
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
+/* Estilo para los enlaces de redes sociales */
 .social a {
-    color: white; /* Cambia el color de las redes sociales a blanco */
+    color: white; /* Cambia el color de los nombres de las redes sociales a blanco */
     text-decoration: none;
     display: inline-block;
     margin: 0 5px;
 }
+
 
 /* Consultas de medios para dispositivos móviles */
 @media (max-width: 768px) {
@@ -143,11 +155,11 @@ footer {
     nav ul {
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
 
     nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin: 10px 0; /* Agrega margen vertical para separar los elementos */
     }
 
     .gallery img {
