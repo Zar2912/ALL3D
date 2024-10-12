@@ -145,20 +145,22 @@ footer {
 }
 
 
-/* Consultas de medios para dispositivos móviles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
+/* Consultas de medios para dispositivos móviles con un ancho máximo de 1080px */
+@media (max-width: 1080px) {
+    nav {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente el nav */
+        align-items: center; /* Centra verticalmente si es necesario */
     }
 
     nav ul {
         display: flex;
-        flex-direction: column;
-        align-items: center; /* Alinea los elementos en el centro */
+        justify-content: center; /* Centra los elementos dentro del ul */
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra cada elemento */
         padding: 0;
         margin: 0;
-        list-style: none; /* Elimina los puntos de lista */
+        list-style: none;
     }
 
     nav ul li {
@@ -166,8 +168,10 @@ footer {
     }
 
     nav ul li a {
-        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 18px; /* Ajusta el tamaño de la fuente para mejor visualización */
+        text-align: center;
         width: 100%; /* Asegura que ocupe todo el ancho disponible */
-        text-align: center; /* Centra el texto */
     }
 }
