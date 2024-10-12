@@ -153,30 +153,21 @@ footer {
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Alinea los elementos en el centro */
         padding: 0;
+        margin: 0;
+        list-style: none; /* Elimina los puntos de lista */
     }
 
     nav ul li {
-        margin: 10px 0; /* Agrega margen vertical para separar los elementos */
+        margin: 10px 0; /* Espacio vertical entre los elementos */
     }
 
-    .gallery img {
-        max-width: 45%;
-    }
-
-    .product-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    form input, form textarea, form input[type="file"], form button {
-        width: 90%;
+    nav ul li a {
+        display: block;
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto */
     }
 }
